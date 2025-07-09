@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>{% block title %}My Website{% endblock %}</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')
+}}">
+</head>
+<body>
+<header>
+<h1>Welcome to My Website</h1>
+</header>
+<nav>
+<ul>
+<li><a href="/">Home</a></li>
+<li><a href="/about">About</a></li>
+</ul>
+</nav>
+<div>
+{% block content %}{% endblock %}
+</div>
+<footer>
+<p>&copy; 2025 My Website. All rights reserved.</p>
+<p>Created with <span style="color:#4f8cff;">Flask</span> &amp; <span style="color:#e44d26;">Jinja2</span></p>
+<p>
+    <a href="mailto:info@example.com" style="color:#4f8cff;text-decoration:none;">Contact Us</a> |
+    <a href="https://github.com/hnujwal" target="_blank" style="color:#4f8cff;text-decoration:none;">GitHub</a>
+</p>
+</footer>
+</body>
+</html>
